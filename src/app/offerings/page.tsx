@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 export default function Offerings() {
-  const sectionsRef = useRef<HTMLDivElement[]>([]);
+  const sectionsRef = useRef<HTMLElement[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -25,7 +25,7 @@ export default function Offerings() {
     return () => observer.disconnect();
   }, []);
 
-  const addToRefs = (el: HTMLDivElement | null, index: number) => {
+  const addToRefs = (el: HTMLElement | null, index: number) => {
     if (el) sectionsRef.current[index] = el;
   };
 
