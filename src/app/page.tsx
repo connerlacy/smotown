@@ -1,17 +1,15 @@
 import Link from "next/link";
-import Image from "next/image";
+import { getImagePath } from "@/lib/utils";
 
 export default function Home() {
   return (
     <div>
       {/* Hero Banner */}
       <section className="relative h-[80vh] min-h-[600px]">
-        <Image
-          src="/images/hero-ocean.jpg"
+        <img
+          src={getImagePath("/images/hero-ocean.jpg")}
           alt="Ocean waves meeting shore"
-          fill
-          className="object-cover"
-          priority
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-charcoal/20" />
         {/* Hero content */}
@@ -52,11 +50,10 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative aspect-[4/5] max-w-md mx-auto md:mx-0">
-              <Image
-                src="/images/portrait-outdoor.jpg"
+              <img
+                src={getImagePath("/images/portrait-outdoor.jpg")}
                 alt="Sara Morency"
-                fill
-                className="object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
             <div>

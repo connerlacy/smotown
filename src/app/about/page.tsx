@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { getImagePath } from "@/lib/utils";
 
 export default function About() {
   return (
@@ -8,11 +8,10 @@ export default function About() {
         {/* Portrait and Intro */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           <div className="relative aspect-[3/4] max-w-sm mx-auto md:mx-0">
-            <Image
-              src="/images/portrait.jpg"
+            <img
+              src={getImagePath("/images/portrait.jpg")}
               alt="Sara Morency"
-              fill
-              className="object-cover"
+              className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
           <div>
