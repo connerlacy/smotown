@@ -15,7 +15,7 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus("submitting");
 
-    // TODO: Implement actual form submission (e.g., API route, email service)
+    // TODO: Implement actual form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     setStatus("success");
@@ -33,16 +33,21 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="bg-sage/10 p-8 text-center">
+      <div className="bg-sage-pale/30 rounded-2xl p-8 text-center border border-sage-light/30">
+        <div className="w-12 h-12 rounded-full bg-sage-pale flex items-center justify-center mx-auto mb-4">
+          <svg className="w-6 h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
         <h3 className="text-lg text-charcoal mb-2">
           Thank you
         </h3>
-        <p className="text-charcoal-light text-sm mb-4">
+        <p className="text-charcoal-light text-sm mb-6">
           Your message has been sent. I&apos;ll be in touch soon.
         </p>
         <button
           onClick={() => setStatus("idle")}
-          className="text-sage text-sm hover:text-sage-light transition-colors"
+          className="text-sage text-sm hover:text-sage-dark transition-colors"
         >
           Send another message
         </button>
@@ -51,7 +56,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-5">
       <div>
         <label htmlFor="name" className="block text-sm text-charcoal-light mb-2">
           Name
@@ -63,7 +68,7 @@ export default function ContactForm() {
           required
           value={formData.name}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-warm-gray bg-transparent text-charcoal focus:outline-none focus:border-sage transition-colors"
+          className="w-full px-4 py-3 rounded-xl border border-warm-gray bg-white/50 text-charcoal focus:outline-none focus:border-sage focus:ring-2 focus:ring-sage/10 transition-all duration-200"
         />
       </div>
 
@@ -78,7 +83,7 @@ export default function ContactForm() {
           required
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-warm-gray bg-transparent text-charcoal focus:outline-none focus:border-sage transition-colors"
+          className="w-full px-4 py-3 rounded-xl border border-warm-gray bg-white/50 text-charcoal focus:outline-none focus:border-sage focus:ring-2 focus:ring-sage/10 transition-all duration-200"
         />
       </div>
 
@@ -91,11 +96,12 @@ export default function ContactForm() {
           name="interest"
           value={formData.interest}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-warm-gray bg-transparent text-charcoal focus:outline-none focus:border-sage transition-colors"
+          className="w-full px-4 py-3 rounded-xl border border-warm-gray bg-white/50 text-charcoal focus:outline-none focus:border-sage focus:ring-2 focus:ring-sage/10 transition-all duration-200"
         >
           <option value="">Select an option</option>
           <option value="individual">One-on-One Sessions</option>
-          <option value="group">Group Sessions</option>
+          <option value="group">Group Coaching</option>
+          <option value="team">Team Facilitation</option>
           <option value="workshop">Workshops</option>
           <option value="other">Something else</option>
         </select>
@@ -112,7 +118,7 @@ export default function ContactForm() {
           rows={5}
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-warm-gray bg-transparent text-charcoal focus:outline-none focus:border-sage transition-colors resize-none"
+          className="w-full px-4 py-3 rounded-xl border border-warm-gray bg-white/50 text-charcoal focus:outline-none focus:border-sage focus:ring-2 focus:ring-sage/10 transition-all duration-200 resize-none"
           placeholder="What brings you here?"
         />
       </div>
@@ -120,7 +126,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full bg-sage hover:bg-sage-light disabled:opacity-50 text-white px-6 py-3 text-sm tracking-wide transition-colors"
+        className="w-full bg-sage hover:bg-sage-dark disabled:opacity-50 text-white px-6 py-3.5 rounded-full text-sm tracking-wide transition-all duration-300 hover:shadow-soft"
       >
         {status === "submitting" ? "Sending..." : "Send Message"}
       </button>

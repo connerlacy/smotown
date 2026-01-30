@@ -1,16 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  /* Color palette derived from portraits */
+  /* Color palette - expanded from portraits */
   --cream: #FAF8F5;
+  --cream-dark: #F5F2ED;
+
+  /* Sage family (from linen top, foliage) */
+  --sage-dark: #6B7A5D;
   --sage: #8B9A7D;
   --sage-light: #A8B49C;
+  --sage-pale: #D4DCD0;
+
+  /* Teal family (from earrings, ocean) */
+  --teal-dark: #5A8A90;
   --teal: #7BA3A8;
-  --teal-muted: #9FBCC0;
+  --teal-light: #9FBCC0;
+  --teal-pale: #D0E1E3;
+
+  /* Denim family (from jacket) */
+  --denim-dark: #5A7A8A;
+  --denim: #8BA4B4;
+  --denim-light: #A8BDC9;
+  --denim-pale: #D4E1E8;
+
+  /* Slate family (from necklace) */
+  --slate-dark: #4A5A66;
+  --slate: #6B7B8A;
+  --slate-light: #8A9AA8;
+  --slate-pale: #C8D0D8;
+
+  /* Warm tones (from hat, skin tones) */
+  --tan-dark: #A68B5B;
   --tan: #C4A77D;
+  --tan-light: #D9C4A5;
+  --tan-pale: #EDE5D8;
+
+  /* Rust/Terracotta (from beaded earrings) */
+  --rust-dark: #8A4A3A;
+  --rust: #B86B4C;
+  --rust-light: #D4927A;
+  --rust-pale: #EEDDD6;
+
+  /* Mustard/Ochre (from earring accents) */
+  --ochre-dark: #9A7A30;
+  --ochre: #C9A857;
+  --ochre-light: #DBBF7A;
+  --ochre-pale: #F0E6CC;
+
+  /* Blush accents */
+  --blush: #D4A5A5;
+  --blush-light: #E8CCCC;
+  --blush-pale: #F5E8E8;
+
+  /* Neutrals */
   --charcoal: #4A4A4A;
   --charcoal-light: #6B6B6B;
+  --charcoal-lighter: #8A8A8A;
   --warm-gray: #E8E6E3;
+  --warm-gray-dark: #D5D2CD;
+  --silver: #E5E5E5;
 
   --background: var(--cream);
   --foreground: var(--charcoal);
@@ -20,14 +68,44 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-sage-dark: var(--sage-dark);
   --color-sage: var(--sage);
   --color-sage-light: var(--sage-light);
+  --color-sage-pale: var(--sage-pale);
+  --color-teal-dark: var(--teal-dark);
   --color-teal: var(--teal);
-  --color-teal-muted: var(--teal-muted);
+  --color-teal-light: var(--teal-light);
+  --color-teal-pale: var(--teal-pale);
+  --color-denim-dark: var(--denim-dark);
+  --color-denim: var(--denim);
+  --color-denim-light: var(--denim-light);
+  --color-denim-pale: var(--denim-pale);
+  --color-slate-dark: var(--slate-dark);
+  --color-slate: var(--slate);
+  --color-slate-light: var(--slate-light);
+  --color-slate-pale: var(--slate-pale);
+  --color-tan-dark: var(--tan-dark);
   --color-tan: var(--tan);
+  --color-tan-light: var(--tan-light);
+  --color-tan-pale: var(--tan-pale);
+  --color-rust-dark: var(--rust-dark);
+  --color-rust: var(--rust);
+  --color-rust-light: var(--rust-light);
+  --color-rust-pale: var(--rust-pale);
+  --color-ochre-dark: var(--ochre-dark);
+  --color-ochre: var(--ochre);
+  --color-ochre-light: var(--ochre-light);
+  --color-ochre-pale: var(--ochre-pale);
+  --color-blush: var(--blush);
+  --color-blush-light: var(--blush-light);
+  --color-blush-pale: var(--blush-pale);
   --color-charcoal: var(--charcoal);
   --color-charcoal-light: var(--charcoal-light);
+  --color-charcoal-lighter: var(--charcoal-lighter);
   --color-warm-gray: var(--warm-gray);
+  --color-warm-gray-dark: var(--warm-gray-dark);
+  --color-silver: var(--silver);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -38,4 +116,129 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
-/* Remove dark mode - keep it soft and light */
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.4s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+/* Staggered animation delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Smooth transitions for interactive elements */
+.transition-soft {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Soft shadows */
+.shadow-soft {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-soft-lg {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Scroll-triggered animations */
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
