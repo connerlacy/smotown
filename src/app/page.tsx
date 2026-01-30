@@ -125,22 +125,30 @@ export default function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            {[
-              { text: "Healing professionals seeking their own growth", color: "teal" },
-              { text: "Activists and social change makers", color: "sage" },
-              { text: "People-oriented managers and leaders", color: "tan" },
-              { text: "Tech professionals with a human focus", color: "blush" },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className={`p-6 rounded-2xl bg-white/60 border border-${item.color}-light/30 shadow-soft transition-all duration-300 hover:shadow-soft-lg hover:-translate-y-1`}
-              >
-                <div className={`w-3 h-3 rounded-full bg-${item.color} mb-4`} />
-                <p className="text-charcoal-light leading-relaxed">
-                  {item.text}
-                </p>
-              </div>
-            ))}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-teal-pale/60 to-white border border-teal-light/40 shadow-soft transition-all duration-300 hover:shadow-soft-lg hover:-translate-y-1">
+              <div className="w-4 h-4 rounded-full bg-teal mb-4" />
+              <p className="text-charcoal leading-relaxed font-medium">
+                Healing professionals seeking their own growth
+              </p>
+            </div>
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-sage-pale/60 to-white border border-sage-light/40 shadow-soft transition-all duration-300 hover:shadow-soft-lg hover:-translate-y-1">
+              <div className="w-4 h-4 rounded-full bg-sage mb-4" />
+              <p className="text-charcoal leading-relaxed font-medium">
+                Activists and social change makers
+              </p>
+            </div>
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-ochre-pale/60 to-white border border-ochre-light/40 shadow-soft transition-all duration-300 hover:shadow-soft-lg hover:-translate-y-1">
+              <div className="w-4 h-4 rounded-full bg-ochre mb-4" />
+              <p className="text-charcoal leading-relaxed font-medium">
+                People-oriented managers and leaders
+              </p>
+            </div>
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-rust-pale/60 to-white border border-rust-light/40 shadow-soft transition-all duration-300 hover:shadow-soft-lg hover:-translate-y-1">
+              <div className="w-4 h-4 rounded-full bg-rust mb-4" />
+              <p className="text-charcoal leading-relaxed font-medium">
+                Tech professionals with a human focus
+              </p>
+            </div>
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-warm-gray-dark to-transparent" />

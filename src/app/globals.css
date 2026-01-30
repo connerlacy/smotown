@@ -6,50 +6,70 @@
   --cream-dark: #F5F2ED;
 
   /* Sage family (from linen top, foliage) */
-  --sage-dark: #6B7A5D;
-  --sage: #8B9A7D;
-  --sage-light: #A8B49C;
+  --sage-deep: #4A5D40;
+  --sage-dark: #5D7050;
+  --sage: #7A9468;
+  --sage-light: #9BB48A;
   --sage-pale: #D4DCD0;
 
   /* Teal family (from earrings, ocean) */
-  --teal-dark: #5A8A90;
-  --teal: #7BA3A8;
-  --teal-light: #9FBCC0;
+  --teal-deep: #2D5A5E;
+  --teal-dark: #3D7478;
+  --teal: #4A9196;
+  --teal-light: #7DBDC0;
   --teal-pale: #D0E1E3;
 
   /* Denim family (from jacket) */
-  --denim-dark: #5A7A8A;
-  --denim: #8BA4B4;
-  --denim-light: #A8BDC9;
+  --denim-deep: #3A5A6A;
+  --denim-dark: #4A6A7A;
+  --denim: #6A8A9A;
+  --denim-light: #9ABACA;
   --denim-pale: #D4E1E8;
 
   /* Slate family (from necklace) */
+  --slate-deep: #3A4A56;
   --slate-dark: #4A5A66;
   --slate: #6B7B8A;
   --slate-light: #8A9AA8;
   --slate-pale: #C8D0D8;
 
   /* Warm tones (from hat, skin tones) */
-  --tan-dark: #A68B5B;
-  --tan: #C4A77D;
-  --tan-light: #D9C4A5;
+  --tan-deep: #8A6A3A;
+  --tan-dark: #A07A48;
+  --tan: #C4A060;
+  --tan-light: #D9C090;
   --tan-pale: #EDE5D8;
 
   /* Rust/Terracotta (from beaded earrings) */
-  --rust-dark: #8A4A3A;
-  --rust: #B86B4C;
-  --rust-light: #D4927A;
+  --rust-deep: #6A3028;
+  --rust-dark: #8A4035;
+  --rust: #B85545;
+  --rust-light: #D4806A;
   --rust-pale: #EEDDD6;
 
   /* Mustard/Ochre (from earring accents) */
-  --ochre-dark: #9A7A30;
-  --ochre: #C9A857;
-  --ochre-light: #DBBF7A;
+  --ochre-deep: #7A5A10;
+  --ochre-dark: #9A7020;
+  --ochre: #C99030;
+  --ochre-light: #DBB050;
   --ochre-pale: #F0E6CC;
 
+  /* Coral accent (new vibrant) */
+  --coral-deep: #A04030;
+  --coral: #E06050;
+  --coral-light: #F0908A;
+  --coral-pale: #FCE8E6;
+
+  /* Indigo accent (new vibrant) */
+  --indigo-deep: #3A3A6A;
+  --indigo: #5A5A9A;
+  --indigo-light: #8A8AC0;
+  --indigo-pale: #E0E0F0;
+
   /* Blush accents */
-  --blush: #D4A5A5;
-  --blush-light: #E8CCCC;
+  --blush-deep: #A07070;
+  --blush: #D4A0A0;
+  --blush-light: #E8C8C8;
   --blush-pale: #F5E8E8;
 
   /* Neutrals */
@@ -69,34 +89,50 @@
   --color-foreground: var(--foreground);
   --color-cream: var(--cream);
   --color-cream-dark: var(--cream-dark);
+  --color-sage-deep: var(--sage-deep);
   --color-sage-dark: var(--sage-dark);
   --color-sage: var(--sage);
   --color-sage-light: var(--sage-light);
   --color-sage-pale: var(--sage-pale);
+  --color-teal-deep: var(--teal-deep);
   --color-teal-dark: var(--teal-dark);
   --color-teal: var(--teal);
   --color-teal-light: var(--teal-light);
   --color-teal-pale: var(--teal-pale);
+  --color-denim-deep: var(--denim-deep);
   --color-denim-dark: var(--denim-dark);
   --color-denim: var(--denim);
   --color-denim-light: var(--denim-light);
   --color-denim-pale: var(--denim-pale);
+  --color-slate-deep: var(--slate-deep);
   --color-slate-dark: var(--slate-dark);
   --color-slate: var(--slate);
   --color-slate-light: var(--slate-light);
   --color-slate-pale: var(--slate-pale);
+  --color-tan-deep: var(--tan-deep);
   --color-tan-dark: var(--tan-dark);
   --color-tan: var(--tan);
   --color-tan-light: var(--tan-light);
   --color-tan-pale: var(--tan-pale);
+  --color-rust-deep: var(--rust-deep);
   --color-rust-dark: var(--rust-dark);
   --color-rust: var(--rust);
   --color-rust-light: var(--rust-light);
   --color-rust-pale: var(--rust-pale);
+  --color-ochre-deep: var(--ochre-deep);
   --color-ochre-dark: var(--ochre-dark);
   --color-ochre: var(--ochre);
   --color-ochre-light: var(--ochre-light);
   --color-ochre-pale: var(--ochre-pale);
+  --color-coral-deep: var(--coral-deep);
+  --color-coral: var(--coral);
+  --color-coral-light: var(--coral-light);
+  --color-coral-pale: var(--coral-pale);
+  --color-indigo-deep: var(--indigo-deep);
+  --color-indigo: var(--indigo);
+  --color-indigo-light: var(--indigo-light);
+  --color-indigo-pale: var(--indigo-pale);
+  --color-blush-deep: var(--blush-deep);
   --color-blush: var(--blush);
   --color-blush-light: var(--blush-light);
   --color-blush-pale: var(--blush-pale);
