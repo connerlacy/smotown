@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  /* Color palette derived from portraits */
+  --cream: #FAF8F5;
+  --sage: #8B9A7D;
+  --sage-light: #A8B49C;
+  --teal: #7BA3A8;
+  --teal-muted: #9FBCC0;
+  --tan: #C4A77D;
+  --charcoal: #4A4A4A;
+  --charcoal-light: #6B6B6B;
+  --warm-gray: #E8E6E3;
+
+  --background: var(--cream);
+  --foreground: var(--charcoal);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-cream: var(--cream);
+  --color-sage: var(--sage);
+  --color-sage-light: var(--sage-light);
+  --color-teal: var(--teal);
+  --color-teal-muted: var(--teal-muted);
+  --color-tan: var(--tan);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-light: var(--charcoal-light);
+  --color-warm-gray: var(--warm-gray);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Remove dark mode - keep it soft and light */
