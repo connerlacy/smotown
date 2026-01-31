@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AnchorSail",
+  title: "Anchor Sail",
   description: "Coaching and facilitation for individuals, groups, and teams",
 };
 

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import { getImagePath } from "@/lib/utils";
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -50,11 +51,16 @@ export default function Navigation() {
           <div className="flex justify-between items-center">
             <Link
               href="/"
-              className={`text-lg font-light tracking-wide transition-colors duration-300 ${
+              className={`flex items-center gap-2 text-lg font-light tracking-wide transition-colors duration-300 ${
                 showLightText ? "text-white" : "text-charcoal"
               }`}
             >
-              AnchorSail
+              <img
+                src={getImagePath("/images/logo.svg")}
+                alt="Anchor Sail"
+                className="h-8 w-auto"
+              />
+              <span className="hidden sm:inline">Anchor Sail</span>
             </Link>
 
             {/* Desktop Navigation */}

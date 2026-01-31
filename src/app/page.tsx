@@ -19,7 +19,7 @@ export default function Home() {
               Coaching & Facilitation
             </p>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extralight text-white mb-8 leading-tight animate-fade-in">
-              AnchorSail
+              Anchor Sail
             </h1>
             <div className="w-20 h-px bg-gradient-to-r from-transparent via-cream/60 to-transparent mx-auto mb-8 animate-fade-in" />
             <p className="text-xl sm:text-2xl text-cream/90 font-light leading-relaxed animate-fade-in-up">

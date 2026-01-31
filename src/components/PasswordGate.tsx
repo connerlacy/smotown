@@ -48,7 +48,7 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
             <div className="w-6 h-6 rounded-full bg-sage" />
           </div>
           <h1 className="text-2xl font-light text-charcoal mb-2">
-            AnchorSail
+            Anchor Sail
           </h1>
           <p className="text-charcoal-light text-sm mb-8">
             Enter password to continue

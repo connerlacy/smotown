@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <Link href="/" className="text-lg font-light text-charcoal">
-              AnchorSail
+              Anchor Sail
             </Link>
             <p className="text-charcoal-lighter text-sm mt-1">
               Coaching & Facilitation
@@ -27,7 +27,7 @@ export default function Footer() {
         </div>
         <div className="mt-10 pt-8 border-t border-warm-gray/50 text-center">
           <p className="text-charcoal-lighter text-sm">
-            &copy; {new Date().getFullYear()} AnchorSail. All rights reserved.
+            &copy; {new Date().getFullYear()} Anchor Sail. All rights reserved.
           </p>
         </div>
       </div>
